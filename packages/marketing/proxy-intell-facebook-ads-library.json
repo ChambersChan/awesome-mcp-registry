@@ -1,0 +1,10 @@
+{
+  "type": "mcp-server",
+  "packageName": "@proxy-intell/facebook-ads-library-mcp",
+  "description": "The most visual MCP server for the Facebook Ad Library. Search any advertiser and your AI surfaces real creatives in-context — images, headlines, and audience targeting — all inside your chat.",
+  "url": "https://github.com/proxy-intell/facebook-ads-library-mcp",
+  "runtime": "python",
+  "license": "mit",
+  "env": {},
+  "name": "Facebook Ads Library MCP"
+}

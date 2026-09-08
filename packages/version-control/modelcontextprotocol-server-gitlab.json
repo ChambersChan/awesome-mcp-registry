@@ -1,18 +1,10 @@
 {
   "type": "mcp-server",
   "packageName": "@modelcontextprotocol/server-gitlab",
-  "description": "MCP server for using the GitLab API",
-  "url": "https://github.com/modelcontextprotocol/servers/blob/main/src/gitlab",
+  "description": "Control repositories, merge requests, and issues via GitLab API.",
+  "url": "https://github.com/modelcontextprotocol/servers-archived/tree/HEAD/src/gitlab",
   "runtime": "node",
-  "license": "MIT",
-  "env": {
-    "GITLAB_PERSONAL_ACCESS_TOKEN": {
-      "description": "Personal access token for GitLab API access",
-      "required": true
-    },
-    "GITLAB_API_URL": {
-      "description": "GitLab API URL (optional, for self-hosted instances)",
-      "required": false
-    }
-  }
+  "license": "unknown",
+  "env": {},
+  "name": "GitLab MCP Server"
 }

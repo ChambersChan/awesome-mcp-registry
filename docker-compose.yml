@@ -1,0 +1,31 @@
+services:
+  toolsdk-mcp-registry:
+    build:
+      dockerfile: Dockerfile
+    container_name: toolsdk-mcp-registry
+    ports:
+      - "3003:3003"
+    environment:
+      - SANDOCK_API_KEY=${SANDOCK_API_KEY}
+      - ENABLE_SEARCH=${ENABLE_SEARCH:-true}
+      - MEILI_HTTP_ADDR=http://meilisearch:7700
+    depends_on:
+      meilisearch:
+        condition: service_healthy
+
+  meilisearch:
+    image: getmeili/meilisearch:v1.10
+    container_name: mcp-registry-meilisearch
+    ports:
+      - "7700:7700"
+    volumes:
+      - meili_data:/meili_data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7700/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  meili_data:
+    driver: local
